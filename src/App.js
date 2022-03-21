@@ -12,13 +12,13 @@ const Menu = ({anecdotes, addNew}) => {
     <Router>
       <div>
         <Link style={padding} to='/anecdotes'>anecdotes</Link>
-        <Link style={padding} to='/createnew'>create new</Link>
+        <Link style={padding} to='/create'>create new</Link>
         <Link style={padding} to='/about'>about</Link>
       </div>
 
       <Routes>
         <Route path='/anecdotes' element={<AnecdoteList anecdotes={anecdotes} />} />
-        <Route path='/createnew' element={<CreateNew addNew={addNew}/>} />
+        <Route path='/create' element={<CreateNew addNew={addNew}/>} />
         <Route path='/about' element={<About />} />
       </Routes>
     </Router>
