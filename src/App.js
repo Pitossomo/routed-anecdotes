@@ -27,7 +27,7 @@ const App = () => {
   }
   const [notification, setNotification] = useState(initialNotification)
   const addNotification = (message, type, timeInSeconds) => {
-    if (notification.timeout) notification.timeout.clearTimeout()
+    if (notification.timeout) clearTimeout(notification.timeout)
     setNotification({
       message,
       type,
